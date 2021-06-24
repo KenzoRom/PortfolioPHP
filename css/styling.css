@@ -1,0 +1,81 @@
+body {
+    font-family: 'Commissioner', sans-serif;
+    color: white;
+    background: linear-gradient(90deg, rgba(0,212,255,0.6), rgba(255,27,59,0.6), rgba(255,145,0,0.6));
+	background-size: 400% 400%;
+	animation: gradient 50s ease infinite;
+}
+
+.section {
+    display: flex;
+    padding: 20px;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 2vh;
+    margin: 10px;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.nav-item:hover{
+    font-size: 24px;
+}
+.nav-list > .nav-item{
+    float: left;
+    padding: 10px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration:none;
+    font-size: 20px;
+}
+
+.nav-title {
+    color: white;
+}
+
+.card {
+    max-width: 16vw;
+    border: 2px solid rgba(255, 0, 0, 0.3);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+
+.school-photo {
+    max-width: 16vw;
+    border-radius: 20px;
+}
+
+.navbar, .card {
+	background: linear-gradient(90deg, rgba(255,145,0,0.6), rgba(255,27,59,0.6), rgba(0,212,255,0.6));
+	background-size: 400% 400%;
+	animation: gradient 30s ease infinite;
+    border-radius: 30px;
+    box-shadow: 3px 5px 4px 5px rgba(0,0,0,0.5);
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
