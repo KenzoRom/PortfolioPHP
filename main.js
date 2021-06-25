@@ -1,20 +1,16 @@
-const themeSwitch = document.querySelector('.theme-switcher');
+const themeButton = document.querySelector('.switch');
 
-function swapTheme(){
-    const BAR = document.querySelector('#NavBar');
-    BAR.classList.toggle("navbar-light");
-    BAR.classList.toggle("navbar-dark");
-    BAR.classList.toggle("bg-light");
-    const elements = document.querySelector('.body-bg');
-    if(elements){
-        elements.classList.toggle('bg-color');
-    }
-    const elements2 = document.querySelectorAll('.p, .h2');
-    for(let switcherino of elements2){
-        switcherino.classList.toggle('font-color');
-    }
-    const button = document.querySelector('.theme-switcher');
-    button.classList.toggle('button-black');
+let darkMode = 0;
+
+const swapTheme = function(){
+    const elements = document.querySelectorAll('.header, section, .selfie-img');
+        for (let i = 0; i < elements.length; i++){
+            elements[i].classList.add('dark');
+            console.log('jmor')
+        }
+
+    
 }
 
-themeSwitch.addEventListener('click', swapTheme);
+themeButton.addEventListener('click', swapTheme)
+
