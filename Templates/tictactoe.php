@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boter Kaas en Eiren</title>
-    <link rel="stylesheet" href="css/styling.css">
-    <link rel="stylesheet" href="TicTacToe/styling.css">
+    <link rel="stylesheet" href="/portfolio/public/css/styling.css">
+    <link rel="stylesheet" href="/portfolio/public/css/tictactoestyle.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto:wght@100&display=swap" rel="stylesheet">
 </head>
@@ -55,5 +55,5 @@
     </section>
 </main>
 </body>
-<script type="module" src="TicTacToe/Main.js"></script>
+<script type="module" src="/portfolio/public/js/TicTacToe/Main.js"></script>
 </html>

@@ -15,6 +15,7 @@
     padding-left: 30px;
     background-color: rgb(195, 60, 84);
     max-height: 10vh;
+    width: 100%;
 }
 
 .nav-list {

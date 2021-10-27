@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aimbot calculator</title>
-    <link rel="stylesheet" href="Rekentool/css/style.css">
-    <link rel="stylesheet" href="css/styling.css">
+    <link rel="stylesheet" href="/portfolio/public/css/aimbotstyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@300&display=swap" rel="stylesheet">
@@ -145,6 +144,6 @@
             <button class="calculate">Calculate!</button>
         </div>
     </main>
-    <script src="Rekentool/javascript.js"></script>
+    <script src="/portfolio/public/js/rekentool.js"></script>
 </body>
 </html>

@@ -1,27 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/stylesheet.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
-    <title>Kenzo's Portfolio</title>
-</head>
-<body>
-    <header class="header">
-        <h1>Kenzo's Portfolio</h1>
-            <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#project">Projects</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                <button class="theme-enable">Dark Mode</button>
-                <button class="theme-disable">Light Mode</button>
-            </ul>
-    </header>
+!<DOCTYPE html>
+    <html>
+    <?php
+    require('../Modules/Projecten.php');
+    require('../Classes/Project.php');
+    require('../Modules/Database.php');
+    include_once('defaults/head.php');
+    $projects = getProjects();
+    ?>
+    <body>
     <section class="main">
+        <?php
+        include_once('defaults/header.php');
+
+        ?>
         <div class="jumbotron-text">
             <div class="name">
                 <h2 class="first-name">Kenzo</h2>
@@ -40,7 +31,7 @@
             </div>
         </div>
         <div class="selfie-img">
-            <img src="img/Selfie.jpg" alt="Selfie" class="selfie">
+            <img src="/portfolio/public/img/Selfie.jpg" alt="Selfie" class="selfie">
         </div>
     </section>
     <section class="school">
@@ -61,9 +52,10 @@
             </div>
         </div>
         <div class="school-photo">
-            <img src="img/School.jpg" alt="Selfie" class="roc-img">
+            <img src="/portfolio/public/img/School.jpg" alt="Selfie" class="roc-img">
         </div>
     </section>
+
     <section class="skills" id="project">
         <div class="skill-title">
             <h2>Skills</h2>
@@ -73,36 +65,45 @@
                         <h2>C#</h2>
                             <div class="vert-line">
                                 &nbsp
-                                </div>
-                                    <h2>Javascript</h2>
-                                        <div class="vert-line">
-                                            &nbsp
-                                            </div>
-                                                <h2>HTML/CSS</h2>
+                            </div>
+                                <h2>Javascript</h2>
+                                    <div class="vert-line">
+                                        &nbsp
+                                    </div>
+                                    <h2>HTML/CSS</h2>
         </div>
     </section>
     <section class="finished-projects">
         <div class="skill-title">
             <h2>Finished Projects</h2>
-                <div class="vert-line">
-                    &nbsp
-                    </div>
-                        <a href="TicTacToe.html"<h2 class="tic-link">Tic Tac Toe</h2></a>
-                            <div class="vert-line">
-                                &nbsp
-                                </div>
-                                    <a href="Aimbot.html"<h2 class="aim-link">Aimbot</h2></a>
     </section>
+    
+<!-- Automatic generated projects-->
+    <section class="finished-projects">
+        <div class="skill-title">
+            <?php
+                foreach ($projects as &$data) {
+                    echo "
+                    <a href='". $data->portfoliolink ."'<h2 class='tic-link'>". $data->title ."</h2></a>
+                    <div class='vert-line'>
+                        &nbsp
+                    </div>
+                    "
+                ;}
+            ?>
+    </section>
+
     <section class="contact" id="contact">
         <h2 class="contact-title">Contact</h2>
     </section>
     <section class="icons">
-        <a href="https://www.instagram.com/kenzo_rom/"><img src="img/Ig.png" alt="ig" class="icon"></a>
-            <img src="img/email.png" alt="email" class="icon"> 
+        <a href="https://www.instagram.com/kenzo_rom/"><img src="/portfolio/public/img/Ig.png" alt="ig" class="icon"></a>
+            <img src="/portfolio/public/img/email.png" alt="email" class="icon"> 
     </section>
     <section class="email">
         <p>302808825@student.rocmondriaan.nl</p>
     </section>
 </body>
-<script src="main.js"></script>
 </html>
+    </html>
+
