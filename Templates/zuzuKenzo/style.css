@@ -1,0 +1,17 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Dongle', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+form {
+    display: flex;
+}
